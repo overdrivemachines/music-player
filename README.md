@@ -7,3 +7,5 @@ Create a Music Player using HTML, CSS and JS. It will show Album art, Title, Art
 Live - https://overdrivemachines.github.io/music-player/
 
 ## References
+
+- HTML Audio/Video DOM - https://www.w3schools.com/tags/ref_av_dom.asp
