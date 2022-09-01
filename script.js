@@ -121,7 +121,22 @@ function updateProgressBar(e) {
   }
 }
 
+// Set Progress Bar
+function setProgressBar(e) {
+  // In an event, this refers to the element that received the event
+  // Find out where user has clicked on the progress bar
+  const width = this.clientWidth;
+
+  const progressPercent = (e.offsetX * 100) / width;
+  const { duration } = music;
+  // Calculate the new current time
+  const newCurrentTime = (progressPercent / 100) * duration;
+  music.currentTime = newCurrentTime;
+}
+
 // Event Listeners
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 music.addEventListener("timeupdate", updateProgressBar);
+music.addEventListener("ended", nextSong);
+progressContainer.addEventListener("click", setProgressBar);
