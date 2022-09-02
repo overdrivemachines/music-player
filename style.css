@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap"); /* Images created by: https://unsplash.com/@pawel_czerwinski */
-
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
 html {
   box-sizing: border-box;
+  background: url(img/backround.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: #c9ced3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,60 +16,55 @@ body {
 }
 
 .player-container {
-  height: 500px;
-  width: 400px;
-  background-color: #e7e7e7;
-  border-radius: 20px;
-  /*  hz offset, 
-      vertical offset, 
-      blur (opacity added to shadow), 
-      spread (how far from the element the shadow is),
-      color */
-
-  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+  width: 980px;
+  background-color: #0c1013;
+  color: #d3cbd8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.img-container {
+  height: 200px;
+  width: 200px;
+  margin-top: 40px;
+}
 .img-container img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 8px;
   box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
-.img-container {
-  height: 300px;
-  width: 300px;
-  position: relative;
-  top: -50px;
-  left: 50px;
-}
-
 h2 {
-  font-size: 25px;
+  font-size: 48px;
   text-align: center;
-  margin: 0;
+  margin-top: 40px;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
 h3 {
-  font-size: 20px;
-  text-align: center;
+  font-size: 32px;
   font-weight: 400;
-  margin: 5px 0 0;
+  color: #5b5861;
+  margin-top: 8px;
+  letter-spacing: 1px;
 }
 
 /* Progress */
 .progress-container {
-  background: #fff;
   border-radius: 5px;
   cursor: pointer;
   margin: 40px 20px;
-  height: 4px;
+  height: 6px;
   width: 90%;
+  background: #5b5861;
 }
 
 .progress {
-  background: #242323;
+  background-image: linear-gradient(to right, #5437a1, #de3975);
   border-radius: 5px;
   height: 100%;
   /* change this to show progress */
@@ -79,36 +74,35 @@ h3 {
 
 .duration-wrapper {
   position: relative;
-  top: -25px;
+  top: -40px;
   display: flex;
   justify-content: space-between;
+  font-size: 24px;
+  color: #5b5861;
 }
 
 /* Controls */
 .player-controls {
-  position: relative;
-  top: -15px;
-  left: 120px;
-  width: 200px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .fa-solid {
   font-size: 30px;
-  color: rgb(129, 129, 129);
-  margin-right: 18px;
   cursor: pointer;
   user-select: none;
   transition: all 0.3s ease-out;
+  margin: 0 24px;
 }
 
 .fa-solid:hover {
-  filter: brightness(80%);
+  color: #de3975;
 }
 
 .main-button {
-  font-size: 40px;
-  position: relative;
-  top: 3px;
+  font-size: 56px;
+  color: #fff;
 }
 
 /* Media Query: iPhone (Vertical) */
@@ -116,6 +110,7 @@ h3 {
   .player-container {
     width: 95vw;
   }
+
   .img-container {
     left: 29px;
   }
